@@ -1,7 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-position: center;
@@ -260,17 +257,17 @@
     margin-bottom: 60px;
   }
 
-  .card-group{
+  .card-group {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
 
-  .card-group-title-upper .card-list{
+  .card-group-title-upper .card-list {
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
-  .image-list{
+  .image-list {
     grid-column: 1/3;
     display: grid;
     grid-template-rows: 23px auto auto auto;
@@ -333,7 +330,7 @@
     grid-template-columns: 0.98fr 2.02fr;
   }
 
-  .card-group-title-upper .card-list{
+  .card-group-title-upper .card-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
