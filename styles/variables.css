@@ -8,5 +8,6 @@
   --main-text-color: #ff0070;
   --text-color: #F1B2CE;
   --hover-color: rgba(255, 0, 112, 0.40);
+  --font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
