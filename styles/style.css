@@ -9,14 +9,12 @@
   background-attachment: fixed;
   font-family: "IBM Plex mono", serif;
   max-width: 100%;
-  margin: 0;
+  overflow-x: hidden;
 }
 
 .header {
   position: relative;
   min-height: 100vh;
-  /* background: url(../images/cover-image-dark.png) no-repeat center center;
-  background-size: cover; */
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   padding: var(--padding-content);
@@ -345,4 +343,21 @@
   :root {
     --padding-content: 20px;
   }
+}
+
+button:hover {
+  outline: 1px solid var(--hover-color);
+}
+
+.link-decoration:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+button:focus-visible {
+  border-bottom: 1px solid var(--main-text-color); 
+  outline: none;
+}
+
+.link-decoration:focus-visible {
+  outline: 1px solid var(--text-color); 
 }

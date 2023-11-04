@@ -12,6 +12,7 @@
   --rec-color: transparent;
   --main-text-color: #353430;
   --text-color: #353430;
+  --hover-color: rgba(50, 49, 45, 0.40);
 }
 
 
@@ -23,6 +24,7 @@
   --titles-color: #FFC2E6;
   --main-text-color: #353430;
   --text-color: #353430;
+  --hover-color: rgba(50, 49, 45, 0.40);
 }
 
 @media (prefers-color-scheme: light) {

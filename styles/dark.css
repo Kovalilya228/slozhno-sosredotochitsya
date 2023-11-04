@@ -12,11 +12,13 @@
   --rec-color: #ff0070;
   --main-text-color: #ff0070;
   --text-color: #F1B2CE;
+  --hover-color: rgba(255, 0, 112, 0.40);
 }
 
 
 .page.theme_dark {
   --accent-color: #ff0070;
+  --hover-color: rgba(255, 0, 112, 0.40);
   --titles-color: #DB00FF; 
   --rec-color: #ff0070;
   --main-text-color: #ff0070;
