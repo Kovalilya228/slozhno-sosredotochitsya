@@ -2,7 +2,11 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-color: #000028;
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   font-family: "IBM Plex mono", serif;
   max-width: 100%;
   margin: 0;
@@ -11,8 +15,8 @@
 .header {
   position: relative;
   min-height: 100vh;
-  background: url(../images/cover-image-dark.png) no-repeat center center;
-  background-size: cover;
+  /* background: url(../images/cover-image-dark.png) no-repeat center center;
+  background-size: cover; */
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   padding: var(--padding-content);
@@ -26,7 +30,7 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--main-text-color);
 }
 
 .header::before {
@@ -48,7 +52,7 @@
   right: calc(var(--padding-content) + 19px);
   top: calc(var(--padding-content) + 1px);
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: var(--rec-color);
   font-size: 18px;
   font-weight: normal;
 }
@@ -62,7 +66,7 @@
   border-radius: 50%;
   width: 9px;
   height: 9px;
-  background-color: var(--accent-color);
+  background-color: var(--rec-color);
   filter: drop-shadow(0px 0px 4px #FF0070);
 }
 
@@ -80,7 +84,7 @@
 .header__theme-menu-button {
   background-color: transparent;
   border: none;
-  color: var(--accent-color);
+  color: var(--main-text-color);
   font-size: 18px;
   text-transform: lowercase;
   font-family: inherit;
@@ -90,12 +94,12 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px var(--accent-color) solid;
+  outline: 1px var(--main-text-color) solid;
 }
 
 .header__title {
   display: block;
-  color: #DB00FF;
+  color: var(--titles-color);
   text-shadow: 4px 4px 0px #FF0070;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
@@ -131,7 +135,7 @@
 }
 
 .card-group-title {
-  color: #FF0070;
+  color: var(--main-text-color);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -158,7 +162,7 @@
 }
 
 .card-description {
-  color: #F1B2CE;
+  color: var(--text-color);
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -193,7 +197,7 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--main-text-color);
 }
 
 .footer::before {
@@ -212,7 +216,7 @@
 
 .footer__title {
   text-align: center;
-  color: #DB00FF;
+  color: var(--titles-color);
   display: block;
   text-shadow: 2px 2px 0px #FF0070;
   font-size: 116px;
@@ -222,8 +226,8 @@
 }
 
 .link-decoration {
-  color: #F1B2CE;
-  text-shadow: 2px 2px 0px #FF0070;
+  color: var(--text-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
   font-family: IBM Plex Mono;
   font-size: 18px;
   font-style: normal;
@@ -255,6 +259,7 @@
 
   .main {
     gap: 80px;
+    margin-bottom: 60px;
   }
 
   .card-group{
@@ -270,7 +275,7 @@
   .image-list{
     grid-column: 1/3;
     display: grid;
-    grid-template-rows: 23px 1fr 1fr 2fr;
+    grid-template-rows: 23px auto auto auto;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
@@ -284,13 +289,60 @@
     grid-column: 1/-1;
   }
 
-  .block-size-2x1 {
+  .block-size-2x1--1 {
     grid-row: 2;
     grid-column: 1/3;
   }
 
-  .block-size-1x2 {
+  .block-size-1x2--1 {
     grid-row: 2/4;
     grid-column: 3;
+  }
+
+  .block-size-1x2--2 {
+    grid-row: 3/6;
+    grid-column: 1;
+  }
+
+  .block-size-2x1--2 {
+    grid-row: 4/6;
+    grid-column: 2/4;
+  }
+}
+
+@media (width > 1023px) {
+
+  .header__theme-menu {
+    grid-column: 1/3;
+    align-self: start;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .header__title {
+    font-size: clamp(9.8125rem, 9.351rem + 0.7212vw, 10rem);
+  }
+
+  .footer__title {
+    font-size: clamp(9.8125rem, 9.351rem + 0.7212vw, 10rem);
+  }
+
+  .card-less-fraction {
+    grid-template-columns: 0.98fr 2.02fr;
+  }
+
+  .card-group-title-upper .card-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width > 767px) {
+  :root {
+    --padding-content: 20px;
   }
 }

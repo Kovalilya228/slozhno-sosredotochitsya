@@ -5,10 +5,11 @@
 :root {
   --accent-color: #ff0070;
   --padding-content: 10px;
+  --bg-image: url('../images/cover-image-dark.png');
+  --titles-color: #DB00FF; 
+  --bg-color: #000028;
+  --rec-color: #ff0070;
+  --main-text-color: #ff0070;
+  --text-color: #F1B2CE;
 }
 
-@media (width > 767px) {
-  :root {
-    --padding-content: 20px;
-  }
-}
