@@ -1,6 +1,3 @@
-:root.theme-dark {
-}
-
 .page.theme_dark {
   --accent-color: #ff0070;
   --hover-color: rgba(255, 0, 112, 0.40);
