@@ -4,4 +4,11 @@
 */
 :root {
   --accent-color: #ff0070;
+  --padding-content: 10px;
+}
+
+@media (width > 767px) {
+  :root {
+    --padding-content: 20px;
+  }
 }
