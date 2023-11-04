@@ -351,10 +351,10 @@ button:hover {
 }
 
 button:focus-visible {
-  border-bottom: 1px solid var(--main-text-color); 
+  border-bottom: 1px solid var(--main-text-color);
   outline: none;
 }
 
 .link-decoration:focus-visible {
-  outline: 1px solid var(--text-color); 
+  outline: 1px solid var(--text-color);
 }
