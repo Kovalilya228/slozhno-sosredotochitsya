@@ -6,7 +6,6 @@
   background-attachment: fixed;
   font-family: "IBM Plex mono", monospace;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 .header {
@@ -34,7 +33,7 @@
 
 .decorated-zone::before {
   top: var(--padding-content);
-  left: calc(100vw - var(--padding-content) - 25px);
+  right: var(--padding-content);
   border-left: none;
   border-bottom: none;
 }
@@ -67,7 +66,7 @@
   width: 9px;
   height: 9px;
   background-color: var(--rec-color);
-  box-shadow: 0 0 4px 2px #FF0070;
+  box-shadow: 0 0 4px 2px var(--rec-color);
 }
 
 .header__theme-menu {
@@ -291,7 +290,8 @@
 
 @media (width > 1023px) {
 
-  :root {
+  .header,
+  .footer {
     --font-size: clamp(9.8125rem, 9.351rem + 0.7212vw, 10rem);
   }
 
